@@ -59,10 +59,10 @@ function App() {
     <BrowserRouter>
     <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:mediaType/:id" element={<Details />} />
-        <Route path="/search/:query" element={<SearchResult />} />
-        <Route path="/explore/:mediaType" element={<Explore />} />
+        <Route path="/devmood/" element={<Home />} />
+        <Route path="/devmood/:mediaType/:id" element={<Details />} />
+        <Route path="/devmood/search/:query" element={<SearchResult />} />
+        <Route path="/devmood/explore/:mediaType" element={<Explore />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     <Footer />

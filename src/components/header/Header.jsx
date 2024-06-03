@@ -133,7 +133,7 @@ const Header = () => {
     return (
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
             <ContentWrapper>
-                <div className="logo" onClick={() => navigate("/")}>
+                <div className="logo" onClick={() => navigate("/devmood/")}>
                     <img src={logo} alt="" />
                 </div>
                 {/* <video id="video" ref={videoRef} width="100" height="50" autoPlay muted></video> */}

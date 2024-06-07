@@ -27,21 +27,7 @@ const ControlButtons = ({ onRecognitionStop }) => {
           onRecognitionStop(results);
         }}>Stop</button>
       )}
-      {results.length > 0 && (
-        // <div style={{ marginTop: '20px' }}>
-        //   <h2>Detected Information</h2>
-        //   {results.map((detection, index) => (
-        //     <div key={index}>
-        //       <p>Age: {Math.round(detection.age)}</p>
-        //       <p>Gender: {detection.gender}</p>
-        //       <p>
-        //         Emotion: {Object.entries(detection.expressions).reduce((a, b) => (a[1] > b[1] ? a : b))[0]}
-        //       </p>
-        //     </div>
-        //   ))}
-        // </div>
-        <hr />
-      )}
+      {results.length > 0 && (<hr />)}
     </div>
   );
 };

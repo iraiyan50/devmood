@@ -62,10 +62,6 @@ const FaceRecognition = () => {
         const context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
 
-        // faceapi.draw.drawDetections(canvas, resizedDetections);
-        // faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
-        // faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-
         updateDetections(resizedDetections);
       }
     }, 100);

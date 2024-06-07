@@ -15,11 +15,11 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Hide video feed by default */
+    overflow: hidden;
   }
   
   
   .can {
-    z-index: 1; /* Ensure canvas is above video */
+    z-index: 1;
   }
   

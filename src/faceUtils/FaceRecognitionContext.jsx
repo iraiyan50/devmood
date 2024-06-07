@@ -15,7 +15,7 @@ export const FaceRecognitionProvider = ({ children }) => {
 
   const startVideo = () => {
     setVideoPlaying(true);
-    setResults([]); // Clear previous results when starting new recognition
+    setResults([]); 
   };
 
   const stopVideo = () => {
@@ -23,7 +23,7 @@ export const FaceRecognitionProvider = ({ children }) => {
     if (videoRef.current && videoRef.current.srcObject) {
       videoRef.current.srcObject.getTracks().forEach(track => track.stop());
     }
-    setResults(detections); // Store the latest detections as results
+    setResults(detections); 
   };
 
   const updateDetections = (newDetections) => setDetections(newDetections);

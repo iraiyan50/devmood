@@ -59,7 +59,6 @@ function App() {
 
     const getDetection = (newInfo) => {
       setDetectedInfo(newInfo);
-      // console.log(detectedInfo);
     };
 
 

@@ -55,14 +55,22 @@ function App() {
         dispatch(getGenres(allGenres));
     };
 
+    const [detectedInfo, setDetectedInfo] = useState([]);
+
+    const getDetection = (newInfo) => {
+      setDetectedInfo(newInfo);
+      // console.log(detectedInfo);
+    };
+
+
   return (
     <BrowserRouter>
     <Header />
       <Routes>
-        <Route path="/devmood/" element={<Home />} />
+        <Route path="/devmood/" element={<Home sendDetection={getDetection} />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
-        <Route path="/explore/:mediaType" element={<Explore />} />
+        <Route path="/explore/:mediaType" element={<Explore pasDet={detectedInfo}/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     <Footer />

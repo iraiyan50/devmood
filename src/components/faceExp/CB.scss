@@ -1,0 +1,16 @@
+@import "../../mixins.scss";
+
+button{
+            height: 30px;
+            width: 100px;
+            border-radius: 15px;
+            color: white;
+            background-image: var(--gradient);
+                font-size: 16px;
+                cursor: pointer;
+                @include md {
+                    width: 150px;
+                    height: 35px;
+                    font-size: 18px;
+                }
+}

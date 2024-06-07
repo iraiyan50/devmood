@@ -11,6 +11,10 @@ import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
 
+import moodGenre from "../../faceUtils/moodGenre";
+import genderGenre from "../../faceUtils/genderGenre";
+import ageGenre from "../../faceUtils/ageGenre";
+
 let filters = {};
 
 const sortbyData = [
@@ -26,13 +30,15 @@ const sortbyData = [
     { value: "original_title.asc", label: "Title (A-Z)" },
 ];
 
-const Explore = () => {
+const Explore = ({pasDet}) => {
     const [data, setData] = useState(null);
     const [pageNum, setPageNum] = useState(1);
     const [loading, setLoading] = useState(false);
     const [genre, setGenre] = useState(null);
     const [sortby, setSortby] = useState(null);
     const { mediaType } = useParams();
+
+    const [detectedInfo, setDetectedInfo] = useState([]);
 
     const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
 
@@ -63,13 +69,14 @@ const Explore = () => {
     };
 
     useEffect(() => {
+        setDetectedInfo(pasDet);
         filters = {};
         setData(null);
         setPageNum(1);
         setSortby(null);
         setGenre(null);
         fetchInitialData();
-    }, [mediaType]);
+    }, [mediaType, pasDet]);
 
     const onChange = (selectedItems, action) => {
         if (action.name === "sortby") {
@@ -96,6 +103,26 @@ const Explore = () => {
         fetchInitialData();
     };
 
+    const autoSelectGenres = () => {
+
+        const mood = Object.entries(detectedInfo.expressions).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
+        const rawAge = Math.round(detectedInfo.age);
+        const age = (rawAge > 18 ? (rawAge < 40 ? "adult" : "senior") : "underAge");
+        const gender = detectedInfo.gender;
+        
+        console.log(`${mood}, ${age}, ${gender}`);
+        
+        const predefinedGenres = genresData?.genres.filter(genre => 
+            [moodGenre[mood], genderGenre[gender], ageGenre[age]].includes(genre.name)
+        );
+        setGenre(predefinedGenres);
+        let genreId = predefinedGenres.map((g) => g.id);
+        genreId = JSON.stringify(genreId).slice(1, -1);
+        filters.with_genres = genreId;
+        setPageNum(1);
+        fetchInitialData();
+    };
+
     return (
         <div className="explorePage">
             <ContentWrapper>
@@ -104,6 +131,11 @@ const Explore = () => {
                         {mediaType === "tv"
                             ? "Explore TV Shows"
                             : "Explore Movies"}
+                    </div>
+                    <div className="autoSel">
+                        <button className="autoSelBtn" onClick={autoSelectGenres}>
+                            Auto Filter
+                        </button>
                     </div>
                     <div className="filters">
                         <Select

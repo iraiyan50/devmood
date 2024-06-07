@@ -6,6 +6,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 // import * as faceapi from 'face-api.js';
 
+// import { FaceRecognitionProvider } from '../../faceUtils/FaceRecognitionContext';
+// import FaceRecognition from '../faceExp/FaceRecognition';
+// import ControlButtons from '../faceExp/ControlButtons';
+
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
@@ -136,7 +140,15 @@ const Header = () => {
                 <div className="logo" onClick={() => navigate("/devmood/")}>
                     <img src={logo} alt="" />
                 </div>
-                {/* <video id="video" ref={videoRef} width="100" height="50" autoPlay muted></video> */}
+                {/* <video id="video" ref={videoRef} width="100" height="50" autoPlay muted></video>
+                <canvas ref={canvasRef} width="100" height="50" className="appcanvas"/> */}
+                {/* <FaceRecognitionProvider>
+                    <div style={{ textAlign: 'center' }}>
+                        <h1>Face Recognition App</h1>
+                        <FaceRecognition />
+                        <ControlButtons />
+                    </div>
+                </FaceRecognitionProvider> */}
                 <ul className="menuItems">
                     <li
                         className="menuItem"

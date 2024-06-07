@@ -14,8 +14,6 @@ const Home = ({sendDetection}) => {
     const getDetection = (newInfo) => {
         setDetectedInfo(newInfo);
         sendDetection(detectedInfo);
-        const emotion = Object.entries(newInfo.expressions).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
-        // console.log(`${emotion}`);
     };
 
     return (

@@ -22,12 +22,14 @@ const Footer = () => {
                     <li className="menuItem">FAQ</li>
                 </ul>
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                MoodFlix is a web application that uses facial expression recognition to detect a user's emotions and age, and then suggests movies and shows based on these factors.
+                    <p>
+                        All rights reserved. Team WorkWizards
+                        <p>Nuh Islam</p>
+                        <p>Iftikhr Zakir</p>
+                        <p>Noshin Nawar</p>
+                        <p>Raiyan Ibrahim</p>
+                    </p>
                 </div>
                 <div className="socialIcons">
                     <span className="icon">

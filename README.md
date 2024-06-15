@@ -17,8 +17,9 @@ This personalized approach aims to enhance the movie-watching experience by reco
 
 
 ## Screenshots
+<br>
+![image](https://github.com/iraiyan50/devmood/blob/master/ScreenShots/homeView.png)
 <p align="center">
-  ![image](https://github.com/iraiyan50/devmood/blob/master/ScreenShots/homeView.png)
   <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/homeView.png?raw=true" width="16%" />
   <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/exploreView.png?raw=true" width="16%" />
   <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/mobileView.jpg?raw=true" width="16%" />

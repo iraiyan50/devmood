@@ -1,4 +1,4 @@
-# MoodFlix 🎬
+# MoodFlix 🎬 🎭
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![React](https://img.shields.io/badge/Frontend-React-blue.svg)](https://react.dev/)
@@ -79,7 +79,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**DevMood**: Discover movies that match your feelings! 🎞️
+**MoodFlix**: Discover movies that match your feelings! 🎞️
 
 # Website
 

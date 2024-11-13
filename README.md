@@ -1,64 +1,85 @@
-# MoodFlix
+# MoodFlix 🎬
 
-**Explore Movies and TV shows for your Mood.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![React](https://img.shields.io/badge/Frontend-React-blue.svg)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Backend-Node.js-green.svg)](https://nodejs.org/)
+[![TMDB API](https://img.shields.io/badge/API-TMDB-orange.svg)](https://www.themoviedb.org/documentation/api)
 
-# Table of Contents
+### Find Movies to Match Your Mood and Discover New Favorites! 🎥
 
-- [About the Project](#about-the-project)
-  - [Screenshots](#screenshots)
-  - [Tech Stack](#tech-stack)
-- [Run Locally](#run-locally)
-- [Website](#website)
+**MoodFlix** is a unique web application that combines mood detection and an extensive movie search. By analyzing your camera feed, it can detect your mood and recommend movies accordingly. Users can also manually search for movies or series and get detailed information, including similar recommendations.
 
-# About the Project
-MoodFlix is a web application that uses facial expression recognition to detect a user’s emotions and age, and then suggests movies and shows based on these factors.
+## 🚀 Features
 
-This personalized approach aims to enhance the movie-watching experience by recommending films that align with the user's current mood and preferred genre.
+- **Mood-Based Movie Suggestions**: Detects the user’s mood through camera input and suggests movies that match.
+- **Extensive Movie Search**: Allows users to search for movies or series with detailed information.
+- **Similar Movies Recommendations**: Provides suggestions of movies related to the one being viewed.
+- **Movie/Series Details**: Displays essential movie information like synopsis, cast, ratings, and more.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js
+- **Backend**: Node.js with [TMDB API](https://www.themoviedb.org/documentation/api) for fetching movie data
+
+## 📸 Screenshots
+### Homepage
+![homeView](https://github.com/user-attachments/assets/e1c37541-df27-4d22-a858-d7962c973aa4)
+### Explore
+![exploreView](https://github.com/user-attachments/assets/cbb95700-ac2c-4970-993d-2df5dde54728)
+### Details
+![detailsView](https://github.com/user-attachments/assets/1d94ab63-88e3-46ef-af47-ac2a11577572)
+### Similar
+![similarView](https://github.com/user-attachments/assets/e027f3ee-a028-4512-8e78-68d738931210)
+### Mobile
+![mobileView](https://github.com/user-attachments/assets/088927ed-36b1-491f-996a-73d0df005f00)
 
 
-## Screenshots
-<p align="center">
-  <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/homeView.png?raw=true" width="16%" />
-  <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/exploreView.png?raw=true" width="16%" />
-  <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/mobileView.jpg?raw=true" width="16%" />
-  <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/detailsView.png?raw=true" width="16%" />
-  <img src="https://github.com/iraiyan50/devmood/blob/master/ScreenShots/similarView.png?raw=true" width="16%" />
-</p>
+## 📦 Getting Started
 
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/iraiyan50/devmood.git
+   cd devmood
+   ```
 
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
+3. **Set up API Credentials**:
+   - Obtain a TMDB API key from [TMDB](https://www.themoviedb.org/documentation/api).
+   - Add your API key to the `.env` file.
 
-## Tech Stack
+4. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-#### Client
-- **Framework**: React
-- **Styling**: SCSS
-- **Others**: Vite, Javascript, Tensorflow
+   The app should now be running on [localhost:3000](http://localhost:3000).
 
-#### Database
-- **Database**: TMDB
+## 📚 Usage
 
-# Run Locally
+- **Mood Detection**: Activate the camera to detect mood and view tailored movie recommendations.
+- **Search for Movies/Series**: Manually search for titles and explore details and similar movies.
 
-### Clone the project
-```bash
-git clone https://github.com/iraiyan50/devmood.git
-```
+## 📈 Future Enhancements
 
-### Change to the project directory
-```bash
-cd devmood
-```
+- **Enhanced Mood Analysis** with more emotional categories
+- **User Profiles** to save favorite movies and search history
+- **Real-time Mood Updates** for dynamic recommendations
 
-### Install dependencies
-```bash
-npm install
-```
+## 🤝 Contributing
 
-### Start the server
-```bash
-npm run dev
-```
+Contributions are welcome! Fork the repo and submit a pull request for any proposed changes.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**DevMood**: Discover movies that match your feelings! 🎞️
 
 # Website
 
